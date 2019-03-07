@@ -11,17 +11,9 @@ Servidor Discovery.
 	* Actuator.
 	* Cloud Discovery: Eureka Server.
 
-```
-	dependencies {
-		compile('org.springframework.boot:spring-boot-starter-actuator')
-		compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
-		testCompile('org.springframework.boot:spring-boot-starter-test')
-	}
-```
+3. Anotar con `@EnableEurekaServer` a la clase de configuración.
 
-3. Anotar con *@EnableEurekaServer* a la clase de configuración.
-
-4. Cambiar *application.properties* a *bootstrap.yml* y gregar configuración:
+4. Cambiar `application.properties` a `bootstrap.yml` y gregar configuración:
 ```[yaml]
 server:
   port: ${PORT:8761}
